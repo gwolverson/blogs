@@ -1,0 +1,15 @@
+example:
+  datasource:
+    url: jdbc:mysql://localhost/example
+    username: local-user
+    password: local-password
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev 
+  datasource:
+    url: ${example.datasource.url}
+    username: ${example.datasource.username}
+    password: ${example.datasource.password}

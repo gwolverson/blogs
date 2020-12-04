@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: config-demo
+  name: config-demo
+spec:
+  containers:
+    - image: config-demo:latest
+      name: config-demo
+      ports:
+        - containerPort: 8080
+      imagePullPolicy: IfNotPresent
+      env:      
+        - name: SPRING_PROFILE
+          value: dev
+        - name: SPRING_APPLICATION_JSON
+          valueFrom:
+            configMapKeyRef:
+              name: spring-config
+              key: dev-config.json
+  restartPolicy: Never  
+                  
+          
+                

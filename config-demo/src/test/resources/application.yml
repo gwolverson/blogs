@@ -1,0 +1,19 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: test
+    username: test
+    password: test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#  datasource:
+#    url: ${moms.datasource.url}
+#    username: ${moms.datasource.username}
+#    password: ${moms.datasource.password}
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8090
+
+  
+  
