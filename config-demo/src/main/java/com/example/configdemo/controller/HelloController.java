@@ -1,5 +1,7 @@
 package com.example.configdemo.controller;
 
+import static java.lang.System.getenv;
+
 import com.example.configdemo.config.DemoProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,9 +20,9 @@ public class HelloController {
   @GetMapping("/hello")
   public String hello() {
     System.out.println("DB URL: " + properties.getUrl());
-    System.out.println("DB Username: " + properties.getUsername());
-    System.out.println("DB Password: " + properties.getPassword());
-    
+    System.out.println("DB Username: " + getenv("DB_USERNAME"));
+    System.out.println("DB Password: " + getenv("DB_PASSWORD"));
+
     return "Hello World!";
   }
 }

@@ -19,6 +19,16 @@ spec:
             configMapKeyRef:
               name: spring-config
               key: dev-config.json
+        - name: DB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: datasource-credentials
+              key: username
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: datasource-credentials
+              key: password
   restartPolicy: Never  
                   
           

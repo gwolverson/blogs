@@ -5,7 +5,5 @@ metadata:
 data:
   dev-config.json:
     '{
-      "example.datasource.url": "jdbc:mysql://dev-endpoint/example",
-      "example.datasource.username": "dev-root",
-      "example.datasource.password": "dev-pass"
+      "example.datasource.url": "jdbc:mysql://dev-endpoint/example"
      }'

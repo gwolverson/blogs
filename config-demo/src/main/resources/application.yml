@@ -11,5 +11,5 @@ spring:
       on-profile: dev 
   datasource:
     url: ${example.datasource.url}
-    username: ${example.datasource.username}
-    password: ${example.datasource.password}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
